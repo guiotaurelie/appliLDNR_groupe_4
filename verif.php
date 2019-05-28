@@ -11,6 +11,6 @@ if (empty($_post['nom'])) {
     $nom = $_post['nom'];
     $prenom = $_POST['prenom'];
     $date = $_post['date_de_naissance'];
-    $title = $_post['title'];
+    $titre = $_post['titre'];
 }
 ?>
