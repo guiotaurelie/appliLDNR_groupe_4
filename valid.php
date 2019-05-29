@@ -17,24 +17,15 @@
     $recupTitre = $_POST['titre'];
     $recupNom = $_POST['nom'];
     $recupPrenom = $_POST['prenom'];
-    $recupMessage = $_POST['message'];
-    $recupDate= $_POST['date_de_naissance']
-  //  if($recupTitre== 'MR'):
-    echo 'Bonjour '.$recupTitre. ' '. $recupNom.', '.$recupPrenom. 'né le'.$recupDate;
-   //ndif
-    //else
-
- ?>
-
-
-
-
-<pre>
-<?php
-
+    $recupDate= $_POST['date_de_naissance'];
+			//  if($recupTitre== 'MR'):
+    echo 'Bonjour '.$recupTitre. ' '. $recupNom.', '.$recupPrenom. 'né le : '.$recupDate;
+			//ndif
+			//else
 
 ?>
-</pre>
+
+
 <p>Retourner à la page d'<a href="index.html" title="Retourner au formulaire">accueil</a></p>
 </body>
 
