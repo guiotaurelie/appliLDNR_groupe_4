@@ -11,11 +11,11 @@
 </head>
 
 <body id="top">
-<h1>Affichage du contenu d'un formulaire</h1>
 <?php 
 
 function Affichage()
 {
+    echo "<h1>Affichage du contenu d'un formulaire</h1>";
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
     $date = $_POST['date_de_naissance'];
@@ -29,10 +29,9 @@ function Affichage()
     {
         echo 'Bonjour '.$titre. ' '. $nom.' , '.$prenom.', née le : '.$date;
     }
-
-};
+echo '<p>Retourner à la page d\'<a href="index.html" title="Retourner au formulaire">accueil</a></p>';
+}
 ?>
 
-<p>Retourner à la page d'<a href="index.html" title="Retourner au formulaire">accueil</a></p>
 </body>
 </html>

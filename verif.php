@@ -13,8 +13,6 @@
 </head>
 
 <body id="top">
-<h1>Vérification du contenu d'un formulaire</h1>
-
 
 <pre>
 <!-- Vérification du contenu d'un formulaire -->
@@ -23,7 +21,6 @@ include 'valid.php';
 
 
 echo Verif();
-echo Affichage();
 
 function Verif()
 {
@@ -31,28 +28,35 @@ function Verif()
   $prenom = $_POST['prenom'];
   $date = $_POST['date_de_naissance'];
   $titre = $_POST['titre'];
+  $retour = "0";
   //vérification de champ rempli Champ par champ
   if (($nom == '') || ($nom == 'Mon nom') )
   {
     echo '<h2>veuillez entrer votre nom</h2>';
+    $retour = "1";
     echo'<br/>';
   } 
   if (($prenom == '') || ($prenom == 'Mon Prénom')) 
   {
-    echo '<hr>';
     echo '<h2>veuillez entrer votre prénom</h2>';
+    $retour = "1";
+    echo'<br/>';
   } 
   if ($date == '' ) 
   {
     echo '<h2>veuillez entrer votre date de naissance</h2>';
+    $retour = "1";
+    echo'<br/>';
   } 
-}
-
-
-
+  if ($retour == "1") {
+    echo "<h1>Formulaire invalide</h1>";
+    echo '<p><a href="index.html" title="Retourner au formulaire">Cliquez ici pour mettre à jour le formulaire</a></p>';
+    die;
+  } else {
+    echo Affichage();
+  }
+  }
 ?>
-</pre>
-<p>Retourner à la page d'<a href="index.html" title="Retourner au formulaire">accueil</a></p>
 </body>
 
 </html>
